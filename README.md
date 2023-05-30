@@ -25,6 +25,17 @@ Add these lines into `index.css`:
 Update the `content` property of the `tailwind.config.js`:
 ```js
 {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ]
 }
 ```
+
+## 3. About environment variables
+- `.env`: loaded in all cases.
+- `.env.local`: loaded in all cases, ignored by Git.
+- `.env.[mode]`: only loaded in a specific mode.
+- `.env.[mode].local`: only loaded in a specific mode, ignored by Git.
+
+Refer to [this link](https://stackoverflow.com/questions/70709987/how-to-load-environment-variables-from-env-file-using-vite) to understand how to load env variables in Vite.
